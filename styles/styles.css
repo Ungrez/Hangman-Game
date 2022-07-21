@@ -1,0 +1,118 @@
+@import url('buttons.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #0D2350 ;
+    overflow: hidden;
+}
+#body-blur {
+    background: linear-gradient(135deg, rgba(255,255,255,.1), rgba(255,255,255,0));
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    width: 100vw;
+    height: 100vh;
+}
+.hils {
+    position: absolute;
+    height: 30vh;
+    width: 150%;
+    left: -10%;
+    background-color: #0971C9;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: spin 10s linear infinite alternate-reverse;
+}
+.hils:nth-child(1) {
+    top: -20%;
+}
+.hils:nth-child(2) {
+    bottom: -30%;
+    left: -20%;
+}
+
+@keyframes spin {
+    0% {border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; height: 70vh; transform: rotate(20deg);}
+    100% {border-radius: 40% 60%; height: 50vh; transform: rotate(0)};
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 80vw;
+    height: 80vh;
+    max-width: 60vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 50px 50px 0;
+}
+#game-options {
+    text-align: center;
+    font-size: 26px;
+}
+#game-options div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+#letters-field.hide,.new-game.hide, .hide {
+    display: none;
+}
+#letters-field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.6em;
+}
+#user-input {
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 0.4em;
+    padding: 0.8em;
+}
+.new-game {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 80vw;
+    height: 80vh;
+    max-width: 60vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 50px 50px 0;
+}
+#game-result {
+    align-self: center;
+    font-size: 22px;
+    flex-basis: 60%;
+    padding-top: 10%;
+}
+#game-result p {
+    font-size: 18px;
+}
+#game-result span {
+    padding-left: 0.4em;
+    letter-spacing: 0.2em;
+    font-size: 20px;
+}
+#canvas {
+    border: 2px solid #000;
+    border-radius: 10px;
+    max-height: 50%;
+    margin-top: 1em;
+}

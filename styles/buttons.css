@@ -1,0 +1,57 @@
+#game-options button{
+    padding: 0.6em 0.8em;
+    font-size: 18px;
+    text-transform: capitalize;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s;
+    border: 2px solid #000;
+}
+#game-options button:hover{
+    background-color: #0D2350;
+    color: #fff;
+}
+#game-options button:disabled {
+        background-color: #aaa;
+        color: #777;
+        border: 2px solid #aaa;
+}
+#game-options button.active {
+    background-color: #0D2350;
+    color: #fff;
+    border: 2px solid #0D2350;
+}
+#letters-field .keyButton {
+    padding: 0.5em 1em;
+    transition: .4s;
+    cursor: pointer;
+    border: 2px solid #0D2350;
+}
+#letters-field .keyButton:disabled {
+    background-color: #aaa;
+    color: #777;
+    pointer-events: none;
+    border: 2px solid #aaa;
+}
+#letters-field .keyButton:hover {
+    background-color: #0D2350;
+    color: #fff;
+}
+#letters-field .keyButton .active {
+    background-color: #0D2350;
+    color: #fff;
+}
+#new-game-btn {
+    padding: 1em 2em;
+    font-size: 20px;
+    text-transform: capitalize;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s;
+    border: 2px solid #000;
+    align-self: center;
+}
+#new-game-btn:hover {
+    background-color: #0D2350;
+    color: #fff;
+}
