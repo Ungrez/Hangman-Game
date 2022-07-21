@@ -64,6 +64,7 @@ const init = () => {
     newGamePopUp.classList.add("hide");
     userWord.innerHTML = "";
     winCount = 0;
+    lossCount = 0;
     for(let i = 65; i < 91; i++) {
         let keyButton = document.createElement("button");
         keyButton.classList.add('keyButton');
